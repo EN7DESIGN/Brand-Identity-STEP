@@ -9,13 +9,21 @@ body{
 }
 
 .main{
-    width: 100%;
-    max-width: 1250px;
     margin: 0 auto;
     padding-top: 3%;
     padding-bottom: 4%;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+    overflow: clip;
+}
+
+.image{
+    width: 80%;
+
+    @media screen and (max-width: 1353px) {
+        width: 90%;
+    }
 }
