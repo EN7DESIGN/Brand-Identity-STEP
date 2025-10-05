@@ -124,10 +124,6 @@ body{
         right: 92px;
     }
 
-    .Container .Menus{
-        justify-content: space-between;
-    }
-
     .Container p{
         font-size: 12px;
         width: 232px;
@@ -139,11 +135,21 @@ body{
     }
 }
 
-@media screen and (max-width: 494px){
+@media screen and (max-width: 360px){
     .Navbar{
         max-width: 82%;
     }
     .Navbar img{
-        right: 78px;
+        right: 26px;
+    }
+    .Container p{
+        font-size: 12px;
+        width: 232px;
+    }
+    .Container .Menus{
+        gap: 10px;
+    }
+    .Button{
+        padding: 6px 9px;
     }
 }
