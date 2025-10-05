@@ -116,10 +116,6 @@ body{
 
 /* Queries */
 @media screen and (max-width: 720px) {
-    .Navbar {
-        max-width: 30rem;
-    }
-
     .Navbar img{
         right: 92px;
     }
@@ -135,10 +131,7 @@ body{
     }
 }
 
-@media screen and (max-width: 360px){
-    .Navbar{
-        max-width: 82%;
-    }
+@media screen and (max-width: 496px){
     .Navbar img{
         right: 26px;
     }
