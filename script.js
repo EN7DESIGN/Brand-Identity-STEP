@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Mwendo": "#2C6D70", // Couleur spécifiée pour "Mwendo"
         "Bioterre": "#FFD700", 
         "Urithi": "#1c08cfff", 
-        "Shauri": "#8908cfff", 
+        "Shauri": "#20596B", 
         // Ajoutez d'autres IDs de bouton et leurs couleurs correspondantes ici
     };
 
