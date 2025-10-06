@@ -1,21 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.Button');
-    const mainSections = document.querySelectorAll('main[id^="Main"]'); // Sélectionne tous les éléments <main> dont l'ID commence par "Main"
+    const mainSections = document.querySelectorAll('main[id^="Main"]');
+    const body = document.body; // Référence à l'élément body
+
+    // Définir les couleurs de fond associées à chaque ID de bouton
+    const buttonColors = {
+        "Step": "#051436", // Exemple de couleur pour "Step"
+        "Mwendo": "#2C6D70", // Couleur spécifiée pour "Mwendo"
+        "Bioterre": "#FFD700", 
+        "Urithi": "#1c08cfff", 
+        "Shauri": "#8908cfff", 
+        // Ajoutez d'autres IDs de bouton et leurs couleurs correspondantes ici
+    };
 
     buttons.forEach(button => {
         button.addEventListener('click', (event) => {
-            const clickedButton = event.currentTarget; // Le bouton qui a été cliqué
-            const buttonId = clickedButton.id; // L'ID du bouton cliqué
+            const clickedButton = event.currentTarget;
+            const buttonId = clickedButton.id;
 
             // 1. Gestion de la classe "Inactive" pour les boutons
             buttons.forEach(btn => {
                 if (btn === clickedButton) {
-                    // Si le bouton cliqué a la classe "Inactive", on la retire
                     if (btn.classList.contains('Inactive')) {
                         btn.classList.remove('Inactive');
                     }
                 } else {
-                    // Pour les autres boutons, on ajoute la classe "Inactive" s'ils ne l'ont pas
                     if (!btn.classList.contains('Inactive')) {
                         btn.classList.add('Inactive');
                     }
@@ -23,15 +32,32 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // 2. Gestion de l'affichage des sections <main>
-            const targetMainId = `Main${buttonId}`; // Construit l'ID de la section main cible (ex: "MainStep")
+            const targetMainId = `Main${buttonId}`;
 
             mainSections.forEach(mainSection => {
                 if (mainSection.id === targetMainId) {
-                    mainSection.style.display = 'flex'; // Affiche la section main correspondante
+                    mainSection.style.display = 'flex';
                 } else {
-                    mainSection.style.display = 'none'; // Masque les autres sections main
+                    mainSection.style.display = 'none';
                 }
             });
+
+            // 3. Changement de la couleur de fond du body
+            if (buttonColors[buttonId]) {
+                body.style.backgroundColor = buttonColors[buttonId];
+            } else {
+                // Optionnel: définir une couleur par défaut si l'ID du bouton n'est pas trouvé
+                body.style.backgroundColor = '#051436'; // Couleur par défaut (blanc)
+            }
         });
     });
+
+    // Optionnel: Définir la couleur de fond initiale du body au chargement de la page
+    // en fonction du bouton actif par défaut (si vous en avez un)
+    const initialActiveButton = document.querySelector('.Button:not(.Inactive)');
+    if (initialActiveButton && buttonColors[initialActiveButton.id]) {
+        body.style.backgroundColor = buttonColors[initialActiveButton.id];
+    } else {
+        body.style.backgroundColor = '#051436'; // Couleur par défaut si aucun bouton actif ou couleur non définie
+    }
 });
