@@ -116,6 +116,9 @@ body{
 
 /* Queries */
 @media screen and (max-width: 720px) {
+    .main{
+        padding-bottom: 50%;
+    }
     .Navbar img{
         right: 92px;
     }
@@ -132,8 +135,11 @@ body{
 }
 
 @media screen and (max-width: 496px){
+    .Navbar{
+        max-width: 72%;
+    }
     .Navbar img{
-        right: 26px;
+        right: 12px;
     }
     .Container p{
         font-size: 12px;
@@ -143,6 +149,18 @@ body{
         gap: 10px;
     }
     .Button{
-        padding: 6px 9px;
+        padding: 10px 24px;
+    }
+}
+@media screen and (max-width: 320px){
+    .Navbar img{
+        right: 16px;
+    }
+    .Container p{
+        font-size: 10px;
+        width: 188px;
+    }
+    .Button{
+        padding: 10px 17px;
     }
 }
