@@ -113,7 +113,13 @@ body{
         background: rgba(237, 243, 255, 0.30);
     }
 }
+/* Mwendo */
+#mwendo{
+    display: none;
+}
 
+
+/* ------------------------------------------- */
 /* Queries */
 @media screen and (max-width: 720px) {
     .main{
@@ -164,3 +170,4 @@ body{
         padding: 10px 17px;
     }
 }
+
