@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonColors = {
         "Step": "#051436", // Exemple de couleur pour "Step"
         "Mwendo": "#2C6D70", // Couleur spécifiée pour "Mwendo"
-        "Bioterre": "#FFD700", 
+        "Bioterre": "#00312D", 
         "Urithi": "#1c08cfff", 
         "Shauri": "#20596B", 
         // Ajoutez d'autres IDs de bouton et leurs couleurs correspondantes ici
